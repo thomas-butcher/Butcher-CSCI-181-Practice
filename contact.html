@@ -22,11 +22,28 @@
     <main>
       <h1>Contact</h1>
       <h2>Email:</h2>
-      <h3>
+      <p>
         <a href="mailto:thomasbutcher@outlook.com">thomasbutcher@outlook.com</a>
-      </h3>
+      </p>
       <h2>Phone Number:</h2>
       <p>(907) 315-3348</p>
+      <h2>Contact Form</h2>
+      <section id="contact">
+        <form>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+
+          <p></p>
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+
+          <p></p>
+          <button type="submit">Send Your Message</button>
+        </form>
+      </section>
     </main>
   </body>
 </html>

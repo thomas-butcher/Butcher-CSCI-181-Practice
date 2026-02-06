@@ -101,3 +101,16 @@ ol {
 li {
   margin-bottom: 8px;
 }
+
+input {
+  padding: 8px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+}
+
+textarea {
+  padding: 8px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  resize: vertical;
+}
