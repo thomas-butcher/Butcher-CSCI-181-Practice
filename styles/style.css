@@ -37,7 +37,7 @@ button {
 }
 
 section#hero {
-  background-image: url("../images/IMG_0312.jpg");
+  background-image: url("../images/hero-banner-image.jpg");
   background-size: cover;
   min-height: 30vh;
   background-position: center;
