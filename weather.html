@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <script src="./scripts/theme.js" defer></script>
+    <script src="./scripts/weather.js" defer></script>
+    <title>Missoula Weather</title>
+  </head>
+  <body class="weather-page">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header id="page-header">
+      <img
+        src="./images/tblogo.png"
+        alt="Thomas Butcher logo"
+        width="64"
+        height="64"
+      />
+      <span>Thomas Butcher</span>
+      <nav aria-label="Primary navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="weather.html" aria-current="page">Weather</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button id="theme-toggle" type="button">Switch to Dark Mode</button>
+    </header>
+    <main id="main-content" class="weather-main">
+      <h1>Missoula Weather</h1>
+      <div id="weather-output" class="weather-output" aria-live="polite">
+        Weather data not available.
+      </div>
+    </main>
+  </body>
+</html>

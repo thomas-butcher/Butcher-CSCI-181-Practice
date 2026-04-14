@@ -233,6 +233,60 @@ textarea {
   fill: var(--quote-color);
 }
 
+body.weather-page {
+  min-height: 100vh;
+}
+
+.weather-main {
+  width: min(100%, 480px);
+  min-height: calc(100vh - 160px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.weather-main h1 {
+  margin-top: 0;
+}
+
+.weather-output {
+  margin-top: 16px;
+  padding: 32px 24px;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  background-color: var(--surface-bg);
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+}
+
+.weather-loading {
+  color: var(--muted-text);
+}
+
+.weather-error {
+  color: #b91c1c;
+}
+
+.weather-empty {
+  color: var(--muted-text);
+}
+
+.weather-temperature {
+  margin: 0;
+  color: var(--page-text);
+  font-size: clamp(3rem, 9vw, 4.5rem);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.weather-forecast {
+  margin: 12px 0 0 0;
+  color: var(--muted-text);
+  font-size: 1.25rem;
+  line-height: 1.4;
+}
+
 @media (max-width: 700px) {
   #page-header {
     flex-wrap: wrap;
