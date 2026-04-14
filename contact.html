@@ -5,16 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/style.css" />
     <title>Contact - Thomas Butcher's Portfolio</title>
-    <base href="/Butcher-CSCI-181-Practice/" />
   </head>
 
   <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
-    <header
-      id="page-header"
-      style="position: sticky; top: 0; z-index: 100; background-color: #f5f5f5"
-    >
-      <img src="./images/tblogo.png" alt="Thomas Butcher logo" width="64" height="64" />
+    <header id="page-header">
+      <img
+        src="./images/tblogo.png"
+        alt="Thomas Butcher logo"
+        width="64"
+        height="64"
+      />
+      <span>Thomas Butcher</span>
       <nav aria-label="Primary navigation">
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -22,6 +24,7 @@
           <li><a href="contact.html" aria-current="page">Contact</a></li>
         </ul>
       </nav>
+      <button id="theme-toggle" type="button">Switch to Dark Mode</button>
     </header>
     <main id="main-content">
       <h1>Contact</h1>
@@ -49,5 +52,6 @@
         </form>
       </section>
     </main>
+    <script src="./scripts/theme.js"></script>
   </body>
 </html>

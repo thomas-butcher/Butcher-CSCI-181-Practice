@@ -1,7 +1,25 @@
+:root {
+  --page-bg: #e2dfdfd3;
+  --page-text: #333333;
+  --muted-text: #444444;
+  --heading-bg: #555555;
+  --heading-text: #ffffff;
+  --button-bg: #333333;
+  --button-text: #fafafa;
+  --button-border: #555555;
+  --link-color: #0b5cad;
+  --link-hover: #08498a;
+  --header-bg: #f5f5f5;
+  --surface-bg: #ffffff;
+  --border-color: #cccccc;
+  --skip-bg: #111111;
+  --skip-text: #ffffff;
+  --quote-color: #cbd5e1;
+}
+
 html {
   font-family: "Times New Roman", serif;
   font-size: 16px;
-  background-color: #fafafa;
   box-sizing: border-box;
 }
 
@@ -19,10 +37,32 @@ html {
 body {
   margin: 0;
   padding: 20px;
-  background-color: #e2dfdfd3;
-  color: #333333;
+  background-color: var(--page-bg);
+  color: var(--page-text);
   font-family: "Times New Roman", Times, serif;
   line-height: 1.5rem;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+body.dark {
+  --page-bg: #0f172a;
+  --page-text: #e5e7eb;
+  --muted-text: #cbd5e1;
+  --heading-bg: #1e293b;
+  --heading-text: #f8fafc;
+  --button-bg: #e5e7eb;
+  --button-text: #111827;
+  --button-border: #cbd5e1;
+  --link-color: #93c5fd;
+  --link-hover: #bfdbfe;
+  --header-bg: #111827;
+  --surface-bg: #1f2937;
+  --border-color: #475569;
+  --skip-bg: #f8fafc;
+  --skip-text: #0f172a;
+  --quote-color: #64748b;
 }
 
 .skip-link {
@@ -30,8 +70,8 @@ body {
   top: -100px;
   left: 12px;
   z-index: 2000;
-  background-color: #111111;
-  color: #ffffff;
+  background-color: var(--skip-bg);
+  color: var(--skip-text);
   padding: 10px 14px;
   border-radius: 4px;
   text-decoration: none;
@@ -52,6 +92,36 @@ button {
   font: inherit;
 }
 
+#page-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 16px;
+  margin-bottom: 24px;
+  background-color: var(--header-bg);
+  border-radius: 8px;
+}
+
+#page-header nav ul {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 0;
+  list-style: none;
+}
+
+#page-header span {
+  margin-right: auto;
+}
+
+#theme-toggle {
+  border: 1px solid var(--button-border);
+}
+
 section#hero {
   background-image: url("../images/hero-banner-image.jpg");
   background-size: cover;
@@ -67,9 +137,9 @@ section#hero {
 button {
   cursor: pointer;
   padding: 10px;
-  border-color: #555555;
-  background-color: #333333;
-  color: #fafafa;
+  border: 1px solid var(--button-border);
+  background-color: var(--button-bg);
+  color: var(--button-text);
 }
 
 p,
@@ -85,8 +155,8 @@ h2,
 h3,
 h4 {
   font-family: "Times New Roman", serif;
-  background-color: #555555;
-  color: #ffffff;
+  background-color: var(--heading-bg);
+  color: var(--heading-text);
   font-weight: 600;
   letter-spacing: -0.5px;
   padding: 12px 16px;
@@ -96,13 +166,13 @@ h4 {
 
 p {
   font-family: "Times New Roman", serif;
-  color: #444444;
+  color: var(--muted-text);
   line-height: 1.7;
   margin: 0 0 16px 0;
 }
 
 a {
-  color: #0b5cad;
+  color: var(--link-color);
   text-decoration: none;
   transition: color 0.2s ease;
   font-weight: 500;
@@ -110,7 +180,7 @@ a {
 
 a:hover,
 a:focus-visible {
-  color: #08498a;
+  color: var(--link-hover);
 }
 
 nav a[aria-current="page"] {
@@ -122,7 +192,7 @@ nav a[aria-current="page"] {
 ul,
 ol {
   margin-left: 20px;
-  color: #444444;
+  color: var(--muted-text);
 }
 
 li {
@@ -131,15 +201,54 @@ li {
 
 input {
   padding: 8px;
-  border: 1px solid #cccccc;
+  border: 1px solid var(--border-color);
   border-radius: 4px;
+  background-color: var(--surface-bg);
+  color: var(--page-text);
 }
 
 textarea {
   padding: 8px;
-  border: 1px solid #cccccc;
+  border: 1px solid var(--border-color);
   border-radius: 4px;
   resize: vertical;
+  background-color: var(--surface-bg);
+  color: var(--page-text);
+}
+
+.testimonial-card {
+  background-color: var(--surface-bg);
+  border-color: var(--border-color);
+}
+
+.testimonial-title,
+.testimonial-subtitle,
+.testimonial-text,
+.testimonial-name,
+.testimonial-role {
+  color: var(--page-text);
+}
+
+.testimonial-quote-icon {
+  fill: var(--quote-color);
+}
+
+@media (max-width: 700px) {
+  #page-header {
+    flex-wrap: wrap;
+  }
+
+  #page-header span {
+    margin-right: 0;
+  }
+
+  #page-header nav {
+    width: 100%;
+  }
+
+  #page-header nav ul {
+    flex-wrap: wrap;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
